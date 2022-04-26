@@ -1,9 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~primeng/resources/themes/tailwind-light/theme.css";
+@import '~primeng/resources/primeng.min.css';
+@import '~primeicons/primeicons.css';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '~@fortawesome/fontawesome-free/scss/solid.scss';
 @import '~@fortawesome/fontawesome-free/scss/regular.scss';
 @import '~@fortawesome/fontawesome-free/scss/brands.scss';
+@import '~primeflex/primeflex.css';
 @import '~@fontsource/exo/latin.css';
 html {
   font-family: 'Exo', sans-serif;
