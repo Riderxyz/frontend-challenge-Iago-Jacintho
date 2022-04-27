@@ -1,3 +1,4 @@
+import { CountryHolidayPage } from './pages/country-holiday/country-holiday.component';
 import { LoginPage } from './pages/login/login.component';
 import { HomePage } from './pages/home/home.component';
 import { NgModule } from '@angular/core';
@@ -6,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginPage,
+  },
+  {
+    path: 'country-holiday',
+    component: CountryHolidayPage,
   },
 /*   {
     path: 'qrCodeGen',

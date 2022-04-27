@@ -1,13 +1,15 @@
-<div *ngFor="let country of cardCountryArr">
-  <p-card
-    [header]="country.name"
-    styleClass="card-country"
-    (click)="openModal(country)"
-    [style]="getCountryFlag(country.code)"
-  >
-  </p-card>
-  <p-divider></p-divider>
-</div>
-<p-dialog [(visible)]="showDetails">
-  <app-country-modal></app-country-modal>>
-</p-dialog>
+<div class="grid">
+
+    <div class="col-6" *ngFor="let country of cardCountryArr">
+      <div>
+        <p-card
+          [header]="country.name"
+          styleClass="card-country"
+          (click)="openModal(country)"
+          [style]="dataSrv.getCountryFlagBackground(country.code)"
+        >
+        </p-card>
+      </div>
+    </div>
+    <p-divider></p-divider>
+  </div>

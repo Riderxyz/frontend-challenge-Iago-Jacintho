@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CountryModalComponent } from './country-modal.component';
+import { CountryHolidayComponent } from './country-holiday.component';
 
-describe('CountryModalComponent', () => {
-  let component: CountryModalComponent;
-  let fixture: ComponentFixture<CountryModalComponent>;
+describe('CountryHolidayComponent', () => {
+  let component: CountryHolidayComponent;
+  let fixture: ComponentFixture<CountryHolidayComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CountryModalComponent ]
+      declarations: [ CountryHolidayComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CountryModalComponent);
+    fixture = TestBed.createComponent(CountryHolidayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

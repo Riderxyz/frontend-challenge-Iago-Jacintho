@@ -2,6 +2,7 @@ import { Country } from './../../models/country.model';
 import { dataService } from './../../services/data.service';
 import { Component, OnInit } from '@angular/core';
 import { CountriesInterface } from 'src/app/models/country.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomePage implements OnInit {
   cardCountryArr: Country[] = [];
   showDetails = false;
   selectedContry!: Country;
-  constructor(private dataSrv: dataService) {}
+  constructor(public dataSrv: dataService, private route: Router) {}
 
   ngOnInit(): void {
     this.dataSrv.listCountries.subscribe((res) => {
@@ -22,17 +23,10 @@ export class HomePage implements OnInit {
     });
   }
 
-  getCountryFlag(code: string) {
-    return {
-      backgroundImage:
-        'url(https://purecatamphetamine.github.io/country-flag-icons/3x2/' +
-        code +
-        '.svg)',
-    };
-  }
+
 
   openModal(ev: Country) {
-    this.selectedContry = ev;
-    this.showDetails = !this.showDetails;
+    this.dataSrv.selectedCountry = ev;
+    this.route.navigateByUrl('country-holiday')
   }
 }

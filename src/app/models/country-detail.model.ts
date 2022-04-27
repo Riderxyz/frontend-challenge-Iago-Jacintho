@@ -10,3 +10,14 @@ export interface HolidayInterface {
   regions: string[];
   types: string[];
 }
+
+export const newHolidayInterface = (): HolidayInterface => {
+  return {
+    date: '',
+    name: '',
+    local_name: '',
+    country_code: '',
+    regions: [],
+    types: [],
+  };
+};
